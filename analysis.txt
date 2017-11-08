@@ -1,0 +1,27 @@
+We set 2 pointers "curA" and "curB" to point to linked-list headA and headB.
+Then set the
+
+     [#length of linked-list headA]=L1
+
+     [#length of linked-list headB]=L2
+
+     assuming that L1<L2
+so, the curA will first move the tail of the headA, we have moved step T=L1
+
+by setting the curA to headB we move the curA and the curB at the same time
+
+       [#distance-from-curB-to-tail]=L2-L1
+when we move the curB to the tail of the headB then we set the curB to the headA, at the same time,
+
+        [#distance-from-headB-to-curA]=L2-L1
+So we have the
+
+        [#distance-from-curB-to-meet-point] ==  [#distance-from-curA-to-meet-point]
+We just move the curA and curB at the same time, then we get the meeting point .
+
+The only corner cases happen when the 2 linked-list do not meet, so we need to return NULL once the
+
+      curA==NULL and curB==NULL before to change the curA and curB
+
+
+---by RainbowSecret.
